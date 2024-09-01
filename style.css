@@ -28,15 +28,17 @@ body{
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    height: 100vh;
 }
 body *{
     font-family:"Inter", sans-serif;
     color: var(--text-color);
 }
 #container{
-    width: 360px;
+    width: 100%;
     margin: 56px auto 0px;
     padding: 24px;
+    max-width: 588px;
 }
 #profile{
     text-align: center;
@@ -112,10 +114,10 @@ footer{
     border: 0px;
     border-radius: 50%;
     position: absolute;
-    z-index: 1; /*centaliza de forma que fica como andadres*/
+    z-index: 1; 
     left: 0;
     top: 50%;
-    transform: translateY(-50%); /*deixa um elemnto centralozado da forma que você quiser*/
+    transform: translateY(-50%);
 }
 .light #switch button{
     right: 0;
@@ -130,4 +132,13 @@ footer{
     border: 1px solid var(--stroke-color);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
+}
+/*media queries*/
+@media (min-width: 700px){
+ :root{
+    --bg-url-desktop: url(/assets/bg-desktop.jpg)
+ }   
+ .light{
+    --bg-url-light: url(./assets/bg-desktop-light.jpg)
+ }
 }
